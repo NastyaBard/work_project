@@ -21,9 +21,10 @@ class Program
             switch (choice)
             {
                 case "0": return;
+                //кейсы
                 case "1": AddNumber(); break;
                 case "2": RemoveNumber(); break;
-                //кейсы
+                case "3": DisplayList(); break;
                 default: Console.WriteLine("Неверный ввод"); break;
             }
         }
@@ -57,6 +58,13 @@ class Program
             {
                 Console.WriteLine("Некорректный ввод.");
             }
+        }
+        
+        static void DisplayList()
+        {
+            Console.WriteLine("Список чисел:");
+            foreach (var n in numbers)
+                Console.WriteLine(n);
         }
     }
 }
