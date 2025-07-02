@@ -67,4 +67,12 @@ class Program
                 Console.WriteLine(n);
         }
     }
+    
+    static void SumNumbers()
+    {
+        int sum = 0;
+        foreach (var n in numbers)
+            sum += n;
+        Console.WriteLine("Сумма: " + sum);
+    }
 }
