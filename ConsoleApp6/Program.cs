@@ -25,6 +25,7 @@ class Program
                 case "1": AddNumber(); break;
                 case "2": RemoveNumber(); break;
                 case "3": DisplayList(); break;
+                case "4": SumNumbers(); break;
                 default: Console.WriteLine("Неверный ввод"); break;
             }
         }
@@ -66,13 +67,13 @@ class Program
             foreach (var n in numbers)
                 Console.WriteLine(n);
         }
-    }
-    
-    static void SumNumbers()
-    {
-        int sum = 0;
-        foreach (var n in numbers)
-            sum += n;
-        Console.WriteLine("Сумма: " + sum);
+        
+        static void SumNumbers()
+        {
+            int sum = 0;
+            foreach (var n in numbers)
+                sum += n;
+            Console.WriteLine("Сумма: " + sum);
+        }
     }
 }
