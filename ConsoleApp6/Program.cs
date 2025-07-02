@@ -22,6 +22,7 @@ class Program
             {
                 case "0": return;
                 case "1": AddNumber(); break;
+                case "2": RemoveNumber(); break;
                 //кейсы
                 default: Console.WriteLine("Неверный ввод"); break;
             }
@@ -35,6 +36,22 @@ class Program
             {
                 numbers.Add(num);
                 Console.WriteLine("Число добавлено.");
+            }
+            else
+            {
+                Console.WriteLine("Некорректный ввод.");
+            }
+        }
+        
+        static void RemoveNumber()
+        {
+            Console.Write("Введите число для удаления: ");
+            if (int.TryParse(Console.ReadLine(), out int num))
+            {
+                if (numbers.Remove(num))
+                    Console.WriteLine("Число удалено.");
+                else
+                    Console.WriteLine("Число не найдено.");
             }
             else
             {
