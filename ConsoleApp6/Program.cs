@@ -21,12 +21,25 @@ class Program
             switch (choice)
             {
                 case "0": return;
+                case "1": AddNumber(); break;
                 //кейсы
                 default: Console.WriteLine("Неверный ввод"); break;
             }
         }
         
         //функции
-        
+        static void AddNumber()
+        {
+            Console.Write("Введите число: ");
+            if (int.TryParse(Console.ReadLine(), out int num))
+            {
+                numbers.Add(num);
+                Console.WriteLine("Число добавлено.");
+            }
+            else
+            {
+                Console.WriteLine("Некорректный ввод.");
+            }
+        }
     }
 }
